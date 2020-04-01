@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{% trans 'Account' %} - {{ block.super }}{% endblock %}
+
+{% block footer_article %}{% endblock %}
+
+{% block content %}
+<div id="root">
+    <div class='d-flex align-items-center justify-content-center w-100 h-100' style="min-height: 300px;">
+        <i class='fa fa-spinner-third fa-spin fa-2x' style='color: #aaa;'></i>
+    </div>
+</div>
+{% endblock %}
+
+{% block noscript_head %}
+<link rel="stylesheet" href="{% static 'components/starter-kit/css/2.0d8c20c4.chunk.css' %}"><!-- cssVendor -->
+<link rel="stylesheet" href="{% static 'components/starter-kit/css/main.b8e93bff.chunk.css' %}"><!-- cssMain -->
+{% endblock %}
+
+{% block media_head %}
+<link rel="preload" as="style" type="text/css" href="{% static 'components/starter-kit/css/2.0d8c20c4.chunk.css' %}" onload="this.onload=null;this.rel='stylesheet'"/><!-- cssVendor -->
+<link rel="preload" as="style" type="text/css" href="{% static 'components/starter-kit/css/main.b8e93bff.chunk.css' %}" onload="this.onload=null;this.rel='stylesheet'"/><!-- cssMain -->
+{% endblock %}
+
+{% block media_foot %}
+<script>
+  const apiObj = {};
+  apiObj.baseURL = '{% url "home" %}';
+  apiObj.userDetailURL = '{% url "home" %}';
+  apiObj.itemListURL = '{% url "home" %}';
+  window.__STARTER_KIT_CONTANTS__ = apiObj
+</script>
+<script src="{% static 'components/starter-kit/js/starter-kit-5661a7.js' %}" async></script><!-- jsEssential -->
+<script src="{% static 'components/starter-kit/js/2.7fb188c6.chunk.js' %}" async></script><!-- jsVendor -->
+<script src="{% static 'components/starter-kit/js/main.fe5bacf6.chunk.js' %}" async></script><!-- jsMain -->
+{% endblock %}

@@ -1,0 +1,103 @@
+@import "variables";
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  position: relative;
+}
+
+.CreatorStudio {
+
+  .backBtn {
+    position: absolute;
+    left: 1rem;
+    top: 10px;
+    width: 60px;
+    padding: 8px 0;
+    text-align: center;
+  }
+
+  .currentAvatar {
+    text-align: center;
+  }
+
+  .am-navbar-title {
+    flex-grow: 2;
+    // https://css-tricks.com/flexbox-truncated-text/#article-header-id-3
+    min-width: 0;
+
+    > div {
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  .trix {
+    trix-toolbar {
+      position: sticky;
+      top: 0;
+      left: 0;
+      background-color: #f5f5f9;
+      padding-top: 10px;
+      margin-top: -10px;
+
+      .trix-button--icon-link,
+      .trix-button-group--file-tools,
+      .trix-button-group--block-tools {
+        display: none;
+      }
+
+      .trix-button-row {
+        justify-content: start;
+      }
+
+      .trix-button-group {
+        margin-right: 1em;
+        border: none;
+      }
+
+      .trix-button {
+        margin-right: 0.25em;
+        border: 1px solid $gray-200;
+        padding: 0.5em 1em;
+        border-radius: 4px;
+      }
+    }
+
+    trix-editor {
+      border: none;
+      margin: 0;
+      padding: 0;
+      min-height: 10em;
+      outline: none;
+
+      blockquote {
+        border-left: 2px solid #ccc;
+        padding-left: 1rem;
+      }
+    }
+
+    #trix-editor-top-level {
+      padding: 1rem;
+    }
+  }
+
+  .am-navbar {
+    &-right {
+      padding-right: 1rem;
+      margin-right: 0;
+    }
+  }
+
+}
+
+.anticon {
+  line-height: 0;
+  display: inline-block;
+  vertical-align: text-top;
+}
+
+
