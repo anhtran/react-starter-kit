@@ -13,3 +13,9 @@ This kit helps you:
 7. Building production with Gulp 4 tasks. This kit also helps you understand how to inject built files into Django templates.  
 8. Flexible `XPagination` component that is very good for UX in mobile device.
 9. Other components and utilities are ready to use and easy to modify.
+
+
+## Copyright and license
+Code and documentation copyright 2020 anhtran.net. 
+
+Code released under the MIT License. Docs released under Creative Commons.
