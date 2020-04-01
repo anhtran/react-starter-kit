@@ -18,7 +18,7 @@ This kit helps you:
 
 
 ## TODO
-[ ] Sample of handling form fields with `rc-field-form`
+[checkbox:unchecked] Sample of handling form fields with `rc-field-form`
 
 
 ## Copyright and license
